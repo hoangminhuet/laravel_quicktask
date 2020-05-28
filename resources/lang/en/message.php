@@ -1,0 +1,21 @@
+<?php
+return [
+    'employee_manage' => 'Employee Manage',
+    'create_employee' => 'Create Employee',
+    'name' => 'Name',
+    'email' => 'Email',
+    'phone' => 'Phone',
+    'city' => 'City',
+    'language' => 'Language',
+    'add_employee' => 'Add Employee',
+    'saved' => 'Contact saved!',
+    'actions' => 'Actions',
+    'edit' => 'Edit',
+    'vn' => 'Vietnamese',
+    'en' => 'English',
+    'php' => 'PHP',
+    'ruby' => 'RUBY',
+    'ios' => 'IOS',
+    'mobile' => 'MOBILE',
+    'qa' => 'Q&A',
+];
