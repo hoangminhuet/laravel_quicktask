@@ -7,6 +7,12 @@
     <script type="text/javascript" src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.js') }}"></script>
 </head>
 <body>
+@section('lang')
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-success active" href="{{ route('lang',['lang' => 'vi']) }}">{{ trans('message.vn') }}</a>
+        <a class="btn btn-success active" href="{{ route('lang',['lang' => 'en' ]) }}">{{ trans('message.en') }}</a>
+    </div>
+@show
 <div class="container">
     @yield('main')
 </div>
