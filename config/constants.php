@@ -6,4 +6,5 @@ return [
     'ios' => 'IOS',
     'mobile' => 'MOBILE',
     'qa' => 'Q&A',
+    'paginate' => 10,
 ];

@@ -53,6 +53,7 @@
                 @endforeach
                 </tbody>
             </table>
+            {{ $contacts->render() }}
         <div>
     </div>
 @endsection
