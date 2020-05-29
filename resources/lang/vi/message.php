@@ -1,0 +1,21 @@
+<?php
+return [
+    'employee_manage' => 'Quản lý nhân viên',
+    'create_employee' => 'Thêm mới nhân viên',
+    'name' => 'Tên',
+    'email' => 'Email',
+    'phone' => 'Số điện thoại',
+    'city' => 'Thành phố',
+    'language' => 'Ngôn ngữ',
+    'add_employee' => 'Thêm nhân viên',
+    'saved' => 'Thêm thành công',
+    'actions' => 'Hành động',
+    'vn' => 'Tiếng Việt',
+    'en' => 'Tiếng Anh',
+    'edit' => 'Sửa',
+    'php' => 'PHP',
+    'ruby' => 'RUBY',
+    'ios' => 'IOS',
+    'mobile' => 'MOBILE',
+    'qa' => 'Q&A',
+];
