@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <div class="d-flex justify-content-center">
-                <h2 class="display-3">{{ trans('message.create_employee') }}</h2>
+                <h1 class="display-3">{{ trans('message.update_employee') }}</h1>
             </div>
 
             @if ($errors->any())
@@ -17,42 +17,45 @@
                 </div><br/>
             @endif
 
-            <form method="post" action="{{ route('contacts.store') }}">
+            <form method="post" action="{{ route('contacts.update', $contact->id) }}">
+                @method('PATCH')
                 @csrf
                 <div class="form-group">
                     <label for="name">{{ trans('message.name') }}:</label>
-                    <input type="text" class="form-control" name="name"/>
+                    <input type="text" class="form-control" name="name" value="{{ $contact->name }}"/>
                 </div>
 
                 <div class="form-group">
                     <label for="email">{{ trans('message.email') }}:</label>
-                    <input type="text" class="form-control" name="email"/>
+                    <input type="text" class="form-control" name="email" value="{{ $contact->email }}"/>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">{{ trans('message.phone') }}:</label>
-                    <input type="text" class="form-control" name="phone"/>
+                    <input type="text" class="form-control" name="phone" value="{{ $contact->phone }}"/>
                 </div>
 
                 <div class="form-group">
                     <label for="city">{{ trans('message.city') }}</label>
-                    <input type="text" class="form-control" name="city"/>
+                    <input type="text" class="form-control" name="city" value="{{ $contact->city }}"/>
                 </div>
 
                 <div class="form-group">
                     <label for="language" class="col-sm-2 control-label">{{ trans('message.language') }}</label>
                     <div class="col-sm-5">
                         <select name="language" class="form-control">
-                            <option value={{ config('constants.php') }}>{{ trans('message.php') }}</option>
-                            <option value={{ config('constants.ruby') }}>{{ trans('message.ruby') }}</option>
-                            <option value={{ config('constants.ios') }}>{{ trans('message.ios') }}</option>
-                            <option value={{ config('constants.mobile') }}>{{ trans('message.mobile') }}</option>
-                            <option value={{ config('constants.qa') }}>{{ trans('message.qa') }}</option>
+                            @foreach (config('constants') as $language)
+                                <option value="{{ $language }}"
+                                        @if ($language == old($language))
+                                            selected
+                                        @endif
+                                >{{ $language }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">{{ trans('message.add_employee') }}</button>
+                <button type="submit" class="btn btn-primary">{{ trans('message.edit') }}</button>
                 <a href="{{ route('contacts.index') }}" class="btn btn-primary">{{ trans('message.cancel') }}</a>
             </form>
         </div>

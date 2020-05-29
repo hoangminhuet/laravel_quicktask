@@ -38,16 +38,10 @@ class ContactController extends Controller
      */
     public function store(ContactRequest $request)
     {
-        $contact = new Contact([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'city' => $request->get('city'),
-            'language' => $request->get('language')
-        ]);
-        $contact->save();
+        $contact = $request->all();
+        Contact::create($contact);
 
-        return redirect()->back()->with('success', trans('message.saved'));
+        return redirect()->route('contacts.index')->with('success', trans('message.created'));
     }
 
     /**
@@ -69,7 +63,9 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+
+        return view('contacts.update', compact('contact'));
     }
 
     /**
@@ -79,9 +75,12 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ContactRequest $request, $id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+        $contact->update($request->all());
+
+        return redirect()->route('contacts.index')->with('success', trans('message.updated'));
     }
 
     /**
