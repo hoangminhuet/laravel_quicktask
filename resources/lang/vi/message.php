@@ -18,4 +18,6 @@ return [
     'ios' => 'IOS',
     'mobile' => 'MOBILE',
     'qa' => 'Q&A',
+    'delete' => 'Xóa',
+    'id' => 'STT',
 ];

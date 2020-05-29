@@ -4,10 +4,6 @@
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <div class="d-flex justify-content-center">
-                <a class="btn btn-success active" href="{{ route('lang',['lang' => 'vi']) }}">{{ trans('message.vn') }}</a>
-                <a class="btn btn-success active" href="{{ route('lang',['lang' => 'en' ]) }}">{{ trans('message.en') }}</a>
-            </div>
-            <div class="d-flex justify-content-center">
                 <h1 class="display-3">{{ trans('message.employee_manage') }}</h1>
             </div>
 
