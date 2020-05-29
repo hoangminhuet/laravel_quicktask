@@ -43,7 +43,7 @@
                             <a href="{{ route('contacts.edit',$contact->id) }}" class="btn btn-primary">{{ trans('message.edit') }}</a>
                         </td>
                         <td>
-                            <form action="{{ route('contacts.destroy', $contact->id) }}" method="post">
+                            <form action="{{ route('contacts.destroy', $contact->id) }}" class="delete" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger" type="submit">{{ trans('message.delete') }}</button>
