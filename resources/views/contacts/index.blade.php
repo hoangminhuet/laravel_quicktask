@@ -3,9 +3,21 @@
 @section('main')
     <div class="row">
         <div class="col-sm-12">
-            <div class="d-flex justify-content-center">
-                <h1 class="display-3 text-center">{{ trans('message.employee_manage') }}</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="float-lg-left"><strong>{{ trans('message.employee_manage') }}</strong></h1>
+                </div>
+                <div class="col-sm-6">
+                    <a href="{{ route('contacts.create') }}" class="btn btn-primary float-lg-right">{{ trans('message.add_employee') }}</a>
+                </div>
             </div>
+
+            @if (session()->get('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+
             <table class="table table-striped">
                 <thead>
                 <tr class="text-center">

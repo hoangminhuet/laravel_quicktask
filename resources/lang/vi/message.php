@@ -8,7 +8,7 @@ return [
     'city' => 'Thành phố',
     'language' => 'Ngôn ngữ',
     'add_employee' => 'Thêm nhân viên',
-    'saved' => 'Thêm thành công',
+    'created' => 'Thêm thành công',
     'actions' => 'Hành động',
     'vn' => 'Tiếng Việt',
     'en' => 'Tiếng Anh',
@@ -20,4 +20,7 @@ return [
     'qa' => 'Q&A',
     'delete' => 'Xóa',
     'id' => 'STT',
+    'updated' => 'Sửa thành công!',
+    'update_employee' => 'Chỉnh sửa nhân viên',
+    'cancel' => 'Hủy',
 ];

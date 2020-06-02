@@ -20,4 +20,7 @@ return [
     'qa' => 'Q&A',
     'delete' => 'Delete',
     'id' => 'ID',
+    'update_employee' => 'Update a employee',
+    'updated' => 'Employee updated!',
+    'cancel' => 'Cancel',
 ];
