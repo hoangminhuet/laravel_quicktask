@@ -44,6 +44,7 @@
                     <label for="language" class="col-sm-2 control-label">{{ trans('message.language') }}</label>
                     <div class="col-sm-5">
                         <select name="language" class="form-control">
+
                             @foreach (config('constants') as $language)
                                 <option value="{{ $language }}"
                                         @if ($language == old($language))
@@ -51,6 +52,7 @@
                                         @endif
                                 >{{ $language }}</option>
                             @endforeach
+
                         </select>
                     </div>
                 </div>

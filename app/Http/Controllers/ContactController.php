@@ -15,7 +15,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::paginate(config('constants.paginate'));
 
         return view('contacts.index', compact('contacts'));
     }
