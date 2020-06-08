@@ -23,4 +23,5 @@ return [
     'update_employee' => 'Update a employee',
     'updated' => 'Employee updated!',
     'cancel' => 'Cancel',
+    'deleted' => 'Employee Deleted!',
 ];

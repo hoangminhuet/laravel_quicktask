@@ -23,4 +23,5 @@ return [
     'updated' => 'Sửa thành công!',
     'update_employee' => 'Chỉnh sửa nhân viên',
     'cancel' => 'Hủy',
+    'deleted' => 'Xóa thành công',
 ];

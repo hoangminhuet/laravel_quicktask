@@ -16,6 +16,8 @@
 <div class="container">
     @yield('main')
 </div>
-<script src="{{ asset('js/app.js') }}" type="text/js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/jquery/dist/jquery.js') }}"></script>
+<script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/confirmdelete.js') }}" type="text/javascript"></script>
 </body>
 </html>
